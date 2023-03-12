@@ -55,10 +55,16 @@ array01.forEach(value => {
 })
 console.log(sum)
 
+for (let i = 0; i <= array01.length; i++) {
+  let sum = 0
+  sum += array01[i]
+}
+console.log(sum)
+
 // [課題10] 配列のループ
 // '課題07'の偶数番目の要素だけを持つ別の配列を作成してください。
 
-let arrayEven = array01.filter(function(value,index) {
+const arrayEven = array01.filter((value,index) => {
   if(index % 2 === 0) {
     return true
   }
@@ -66,22 +72,30 @@ let arrayEven = array01.filter(function(value,index) {
 
 console.log(arrayEven)
 
+let newArray = []
+for (let i = 0; i <= array01.length; i++) {
+  if (i % 2 === 0) {
+   console.log(array01[i]);
+  }
+}
+console.log('----------------------------')
+
 // [課題11] 配列の結合
 // '課題07'と'課題10'の配列を結合した別の配列を作成してください。
 
-let array03 = array01.concat(arrayEven)
+const array03 = array01.concat(arrayEven)
 console.log(array03)
 
 // [課題12] 配列の文字列化
 // '課題11'の配列の各要素をカンマ区切りで結合した文字列を作成してください。
 
-let array04 = array03.join(',')
+const array04 = array03.join(',')
 console.log(array04)
 
 // [課題13] map関数
 // '課題11'の配列の各要素を２倍した要素を持つ別の配列をmap関数を使って作成してください。
 
-let arrayDouble = array03.map((value) => {
+const arrayDouble = array03.map((value) => {
     return value * 2
 })
 
@@ -90,7 +104,7 @@ console.log(arrayDouble)
 // [課題14] filter関数
 // '課題11'の配列の各要素の値が３の倍数の要素だけを持つ配列をfilter関数を使って作成してください。
 
-let arrayMultipleOfThree = array03.filter((value) => {
+const arrayMultipleOfThree = array03.filter((value) => {
   return value % 3 === 0
 })
 console.log(arrayMultipleOfThree)
@@ -98,7 +112,7 @@ console.log(arrayMultipleOfThree)
 // [課題15] reduce関数
 // '課題11'の配列の全ての要素の値の和をreduce関数を使って求めてください。
 
-let sumArray = array03.reduce((value,current)=>{
+const sumArray = array03.reduce((value,current)=>{
   return value + current
 })
 console.log(sumArray)
@@ -106,7 +120,7 @@ console.log(sumArray)
 // [課題16] some関数
 // '課題11'の配列に３の倍数が含まれているかsome関数を使って確かめてください。
 
-let tripleArray = array03.some((value) => {
+const tripleArray = array03.some((value) => {
   if(value % 3 === 0) {
     return true
   }
@@ -116,7 +130,7 @@ console.log(tripleArray)
 // [課題17] find関数
 // '課題11'の配列の要素のうち、値が３の倍数である最初の要素の値findを使って求めてください。
 
-let findArray = array03.find((value) => {
-  return value % 3 === 0
-})
+const findArray = array03.find((value) => {
+  return value % 3 === 0;
+});
 console.log(findArray)
