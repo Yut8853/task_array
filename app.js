@@ -127,6 +127,9 @@ const tripleArray = array03.some((value) => {
 })
 console.log(tripleArray)
 
+const tripleArray02 = array03.some(num => num % 3 === 0)
+console.log(`${tripleArray02 ? '3の倍数が含まれています。' : 'は含まれていません。'}`);
+
 // [課題17] find関数
 // '課題11'の配列の要素のうち、値が３の倍数である最初の要素の値findを使って求めてください。
 
