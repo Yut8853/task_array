@@ -74,11 +74,12 @@ const arrayEven = array01.filter((value,index) => {
 console.log(arrayEven)
 
 let newArray = []
-for (let i = 0; i <= array01.length; i++) {
+for (let i = 0; i < array01.length; i++) {
   if (i % 2 === 0) {
-   console.log(array01[i]);
+   newArray.push(array01[i]);
   }
 }
+console.log(newArray);
 console.log('----------------------------')
 
 // [課題11] 配列の結合
